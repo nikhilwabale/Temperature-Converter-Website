@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+
+
+<body>
+    <div class="container-fluid col-sm-3 ">
+
+    <div class="container-fluid d-flex justify-content-center col-sm-6">
+        <div class="row">
+            <div class="card mt-4" style="width: 35rem;">
+                <div class="card-header bg-warning">
+                    <h1 class="text-center text-white text-uppercase">temperature Converter</h1>
+                </div>
+                <div class="card-body border border-warning card-shadow  d-flex justify-content-center">
+                    <form name="myForm">
+                        <div class="form-group text-danger card-body border border-secondary card-shadow">
+                            <label for="Fahrenheit" class="text-uppercase">Fahrenheit :</label>
+                            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
+                            oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+                        </div>
+                        <div class="text-uppercase card-body border border-danger">Celcius  : <span id="outputCelcius"></span></p>   </div>                    
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <script>
+        function temperatureConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+        }
+    </script>
+</body>
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+
+</html>
